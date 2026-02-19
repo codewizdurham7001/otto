@@ -36,7 +36,12 @@ public class Item : MonoBehaviour , IInteractable
     void IInteractable.Interact()
     {
         Inventory = GameObject.Find("Player Model").GetComponent<InvertorySystem>();
-        Inventory.addItem(this);
+        int indexToAdd = Inventory.canAddItem();
+        if (indexToAdd != -1) 
+        {
+            Inventory.addItem(this, indexToAdd);
+            //Destroy(this.gameObject);
+        }
     }
 
     public void Use1()

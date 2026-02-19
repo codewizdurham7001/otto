@@ -2,6 +2,7 @@ using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System.Globalization;
 
 public class InvertorySystem : MonoBehaviour
 {
@@ -12,16 +13,6 @@ public class InvertorySystem : MonoBehaviour
     public KeyCode Use1;
 
     public KeyCode Use2;
-
-    public Image Slot0;
-
-    public Image Slot1;
-
-    public Image Slot2;
-
-    public Image Slot3;
-
-    public Image Slot4;
 
     public List<Image> slots = new List<Image>(5);
 
@@ -86,12 +77,38 @@ public class InvertorySystem : MonoBehaviour
     {
         return selectedItem;
     }
-
+    
     public int canAddItem()
     {
-        if (items.Count != 5)
+        if (items.Count == 0)
         {
-            selectedItem = item;
+            return 0;
+        }
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i] == null)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public void addItem(Item item, int index)
+    {
+        items[index] = item;
+        updateList();
+    }
+
+    private void updateList()
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i] != null)
+            {
+                Debug.Log("updated sprite");
+                slots[i].sprite = items[i].getImage();
+            }
         }
     }
 }

@@ -54,13 +54,8 @@ public class InteractScript : MonoBehaviour
                 InteractableObject = hit.collider;
                 if (Input.GetKeyDown(interactKeyCode))
                 {
-                    InvertorySystem Inventory = GameObject.Find("Player Model").GetComponent<InvertorySystem>();
-                    if (Inventory.items.Count <= 5)
-                    {
-                        Inventory.Slot0.sprite = hit.collider.GetComponent<Item>().getImage();
-                        hit.collider.GetComponent<IInteractable>().Interact();
-                        Destroy(hit.collider.gameObject);
-                    }
+                    hit.collider.GetComponent<IInteractable>().Interact();
+                    Destroy(hit.collider.gameObject);
                 }
             }
         }

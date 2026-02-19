@@ -1513,14 +1513,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72f57231541437d44ba26e4941105bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Use1: 111
   Use2: 324
-  Slot0: {fileID: 1424889130}
-  Slot1: {fileID: 1798083293}
-  Slot2: {fileID: 657238228}
-  Slot3: {fileID: 1426285282}
-  Slot4: {fileID: 1910536767}
+  slots:
+  - {fileID: 1424889130}
+  - {fileID: 1798083293}
+  - {fileID: 657238228}
+  - {fileID: 1426285282}
+  - {fileID: 1910536767}
 --- !u!1001 &807541449
 PrefabInstance:
   m_ObjectHideFlags: 0
