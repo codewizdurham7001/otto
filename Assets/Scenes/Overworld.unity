@@ -1519,7 +1519,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  Use1: 111
+  Use1: 323
   Use2: 324
   slots:
   - {fileID: 1424889130}
@@ -1527,6 +1527,12 @@ MonoBehaviour:
   - {fileID: 657238228}
   - {fileID: 1426285282}
   - {fileID: 1910536767}
+  hobarTiles:
+  - {fileID: 680487827}
+  - {fileID: 1853942101}
+  - {fileID: 1012758001}
+  - {fileID: 62440565}
+  - {fileID: 407586236}
 --- !u!1001 &807541449
 PrefabInstance:
   m_ObjectHideFlags: 0

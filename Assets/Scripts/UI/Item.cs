@@ -40,7 +40,6 @@ public class Item : MonoBehaviour , IInteractable
         if (indexToAdd != -1) 
         {
             Inventory.addItem(this, indexToAdd);
-            //Destroy(this.gameObject);
         }
     }
 

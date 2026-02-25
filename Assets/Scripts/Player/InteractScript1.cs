@@ -55,7 +55,6 @@ public class InteractScript : MonoBehaviour
                 if (Input.GetKeyDown(interactKeyCode))
                 {
                     hit.collider.GetComponent<IInteractable>().Interact();
-                    Destroy(hit.collider.gameObject);
                 }
             }
         }
