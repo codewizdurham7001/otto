@@ -10,11 +10,17 @@ public class AttractiveBreadItem : Item , IInteractable
     void Start()
     {
         setName("Bread");
+        
     }
 
-    public void Use1()
+    public override void Use2()
     {
         HealthManager healthManager = GameObject.Find("Player Model").GetComponent<HealthManager>();
-        healthManager.Heal(5);
+        if (healthManager.CurrentHealth < healthManager.MaxHealth)
+        {
+            healthManager.Heal(5);
+            Inventory = GameObject.Find("Player Model").GetComponent<InvertorySystem>();
+            Inventory.remove();
+        }
     }
 }

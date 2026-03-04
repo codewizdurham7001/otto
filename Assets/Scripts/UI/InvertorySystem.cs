@@ -19,6 +19,9 @@ public class InvertorySystem : MonoBehaviour
     public List<Image> hobarTiles = new List<Image>(5);
 
     private int currentIndex;
+
+    public Sprite blank;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -95,6 +98,16 @@ public class InvertorySystem : MonoBehaviour
             }
         }
         return -1;
+    }
+
+    public void remove()
+    {
+        if (selectedItem != null)
+        {
+            items[currentIndex] = null;
+            slots[currentIndex].sprite = blank;
+            selectedItem = null;
+        }
     }
 
     public void addItem(Item item, int index)

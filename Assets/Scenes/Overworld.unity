@@ -435,7 +435,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Attractive Bread
   image: {fileID: 21300000, guid: 0d757787d77a2934d990f846798af42b, type: 3}
-  runwayModel: {fileID: 0}
+  requiresAmmo: 0
+  viewModel: {fileID: 0}
 --- !u!1001 &230826164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1533,6 +1534,7 @@ MonoBehaviour:
   - {fileID: 1012758001}
   - {fileID: 62440565}
   - {fileID: 407586236}
+  blank: {fileID: 21300000, guid: 49617bcb54233b34d9827d33c6273d06, type: 3}
 --- !u!1001 &807541449
 PrefabInstance:
   m_ObjectHideFlags: 0

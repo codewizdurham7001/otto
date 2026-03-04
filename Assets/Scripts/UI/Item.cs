@@ -6,7 +6,9 @@ public class Item : MonoBehaviour , IInteractable
 
     public Sprite image;
 
-    public GameObject runwayModel;
+    public bool requiresAmmo;
+
+    public GameObject viewModel;
 
     GameObject Player;
     InvertorySystem Inventory;
@@ -18,9 +20,14 @@ public class Item : MonoBehaviour , IInteractable
     
 
     // Update is called once per frame
-    public void SetImage(Sprite image)
+    public void setImage(Sprite image)
     {
         this.image = image;
+    }
+
+    public void setAmmoRequirement()
+    {
+        requiresAmmo = false;
     }
 
     public string getName()
@@ -43,12 +50,12 @@ public class Item : MonoBehaviour , IInteractable
         }
     }
 
-    public void Use1()
+    public virtual void Use1()
     {
         Debug.Log("Yo what's up guys! It's me Joe! Your item file didn't override Use1!");
     }
 
-    public void Use2()
+    public virtual void Use2()
     {
         Debug.Log("Yo what's up guys! It's me Joe! Your item file didn't override Use2!");
     }
