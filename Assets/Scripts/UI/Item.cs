@@ -27,7 +27,7 @@ public class Item : MonoBehaviour , IInteractable
 
     public void setAmmoRequirement()
     {
-        requiresAmmo = false;
+        
     }
 
     public string getName()

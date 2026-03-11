@@ -22,6 +22,14 @@ public class InvertorySystem : MonoBehaviour
 
     public Sprite blank;
 
+    public int Shells = 0;
+
+    public int Rockets = 0;
+
+    public int SmgRoundsWithAlsoLikeAChainsawInThem = 0;
+
+    public int PistolThatCouldHaveBeenARevovlerAmmo = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
