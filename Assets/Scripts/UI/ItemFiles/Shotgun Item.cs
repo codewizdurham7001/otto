@@ -12,9 +12,12 @@ public class ShotgunItem : Item, IInteractable
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        setAmmo(ammoTypes.Shells);
         setName("Shotgun");
     }
     
+    
+
     public override void Use1()
     {
         if (Inventory.Shells > 0)

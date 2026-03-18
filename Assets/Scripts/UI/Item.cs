@@ -4,9 +4,18 @@ public class Item : MonoBehaviour , IInteractable
 {
     public string itemName;
 
-    public Sprite image;
+    public enum ammoTypes
+    {
+        Shells,
+        Rockets,
+        SMG,
+        Pistol
+    }
 
-    public bool requiresAmmo;
+
+    public ammoTypes selectedAmmo;
+
+    public Sprite image;
 
     public GameObject viewModel;
 
@@ -25,9 +34,9 @@ public class Item : MonoBehaviour , IInteractable
         this.image = image;
     }
 
-    public void setAmmoRequirement()
+    public void setAmmo(ammoTypes ammo)
     {
-        
+        selectedAmmo = ammo;
     }
 
     public string getName()
