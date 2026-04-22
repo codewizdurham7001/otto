@@ -119,6 +119,95 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &7214747 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8515487177395317555, guid: f275011b83dbcc7428d6549284d76c28,
+    type: 3}
+  m_PrefabInstance: {fileID: 2051725098}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7214754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42925a1e26dd66742b8e67f12745e2a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speaker: {fileID: 0}
+  Clips: []
+  OnGround: 0
+--- !u!114 &7214755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1563f0977accaa469aad72d9ff85b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackPower: 69
+--- !u!114 &7214756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564a2fcc8efda0c408a50abe207ac527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7214757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8133372204b50543ad03d817e6e20f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Source2: {fileID: 0}
+  Player: {fileID: 753411782}
+  Ground:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  PlayerMask:
+    serializedVersion: 2
+    m_Bits: 2
+  Destination: {x: 1, y: 2, z: 3}
+  DestinationDistance: 7
+  AttackSpeed: 420
+  Vision: 69
+  Reach: 123
+--- !u!114 &7214758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287c5868e5aa2184aa3ef9ba0d5a6b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  rb: {fileID: 0}
+  DashPower: 20
+  DashCool: 0.2
+  DurationOfTheDash: 0.1
+  OnWall: 0
 --- !u!1 &62440563
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,8 +523,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Attractive Bread
+  selectedAmmo: 0
   image: {fileID: 21300000, guid: 0d757787d77a2934d990f846798af42b, type: 3}
-  requiresAmmo: 0
   viewModel: {fileID: 0}
 --- !u!1001 &230826164
 PrefabInstance:
@@ -1535,6 +1624,16 @@ MonoBehaviour:
   - {fileID: 62440565}
   - {fileID: 407586236}
   blank: {fileID: 21300000, guid: 49617bcb54233b34d9827d33c6273d06, type: 3}
+  Shells: 0
+  Rockets: 0
+  SmgRoundsWithAlsoLikeAChainsawInThem: 0
+  PistolThatCouldHaveBeenARevovlerAmmo: 0
+--- !u!4 &753411782 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7027467457393071156, guid: 6a820e99de354694aa8544b6eb138bea,
+    type: 3}
+  m_PrefabInstance: {fileID: 983671663}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &807541449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3893,7 +3992,27 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8515487177395317555, guid: f275011b83dbcc7428d6549284d76c28,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7214754}
+    - targetCorrespondingSourceObject: {fileID: 8515487177395317555, guid: f275011b83dbcc7428d6549284d76c28,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7214755}
+    - targetCorrespondingSourceObject: {fileID: 8515487177395317555, guid: f275011b83dbcc7428d6549284d76c28,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7214756}
+    - targetCorrespondingSourceObject: {fileID: 8515487177395317555, guid: f275011b83dbcc7428d6549284d76c28,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7214757}
+    - targetCorrespondingSourceObject: {fileID: 8515487177395317555, guid: f275011b83dbcc7428d6549284d76c28,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7214758}
   m_SourcePrefab: {fileID: 100100000, guid: f275011b83dbcc7428d6549284d76c28, type: 3}
 --- !u!1 &2063506126 stripped
 GameObject:
