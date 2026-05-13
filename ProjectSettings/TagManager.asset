@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Painful
   - ItemObject
+  - Enemy
   layers:
   - Default
   - TransparentFX

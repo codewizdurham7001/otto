@@ -33,6 +33,7 @@ public class HealthManager : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<EssenceOfPain>() != null)
         {
+            ///Add Invincibility Frames at some point in some way, I think.
             CurrentHealth -= collision.gameObject.GetComponent<EssenceOfPain>().AttackPower;
         }
     }
