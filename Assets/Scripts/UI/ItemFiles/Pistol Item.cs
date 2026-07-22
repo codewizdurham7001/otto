@@ -5,11 +5,12 @@ public class PistolItem : Item, IInteractable
 {
     private int cooldown;
     public GameObject player;
-    LineRenderer bulletLine = GetComponent<LineRenderer>();
+    private LineRenderer bulletLine;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        bulletLine = GetComponent<LineRenderer>();
         player = GameObject.FindWithTag("Player");
         setName("Pistol");
         setAmmo(ammoTypes.Pistol);
@@ -43,14 +44,15 @@ public class PistolItem : Item, IInteractable
                 }
             }
         }
-    }
-
-    IEnumerator ShowTracer(Vector3 hitPosition)
-    {
-        bulletLine.SetPosition(0, transform.position);
-        bulletLine.SetPosition(1, hitPosition);
-        bulletLine.enabled = true;
-        yield return new WaitForSeconds(0.1f);
-        bulletLine.enabled = false;
+        //Need to switch coroutine to function with timer
+        IEnumerator ShowTracer(Vector3 hitPosition)
+        {
+            bulletLine.SetPosition(0, transform.position);
+            bulletLine.SetPosition(1, hitPosition);
+            bulletLine.enabled = true;
+            print("tracer enabled");
+            yield return new WaitForSeconds(0.1f);
+            bulletLine.enabled = false;
+        }
     }
 }
