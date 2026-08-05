@@ -12,11 +12,11 @@ public class InteractScript : MonoBehaviour
     //This variable is for keeping track of what object we are looking at !
     public Collider InteractableObject;
 
-    //this variable is for keeping track of what key we are assigning to be our interact button
+    //This variable is for keeping track of what key we are assigning to be our interact button
     public KeyCode interactKeyCode;
 
     //Otto here, I am asuming that this is the length that you can reach.
-    public float length = 2.5f;
+    public float length = 0.5f;
 
     private void Update()
     {

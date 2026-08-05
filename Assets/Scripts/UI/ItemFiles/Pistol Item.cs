@@ -20,17 +20,17 @@ public class PistolItem : Item, IInteractable
     {
         if (cooldown == 0) 
         {
+            RaycastHit hit;
 
-           
 
             Ray detector = new Ray(player.transform.position, player.transform.forward);
             Debug.DrawRay(player.transform.position, player.transform.forward * 100, Color.yellow, 1f);
             Debug.Log("shots fired!");
 
 
-            
 
-            if (Physics.Raycast(detector,out RaycastHit hit,100))
+            
+            if (Physics.Raycast(detector,out hit,100))
             {
                 Debug.Log("Pistol Hit Something");
                 Debug.Log(hit.collider.tag);
@@ -40,12 +40,15 @@ public class PistolItem : Item, IInteractable
                     EnemyHealth HP = (hit.collider.GetComponent<EnemyHealth>());
                     HP.Health -= 10;
 
-                    StartCoroutine(ShowTracer(hit.collider.transform.position));
+                    //StartCoroutine(ShowTracer(hit.collider.transform.position));
                 }
             }
+            return hit;
         }
+
+        /*
         //Need to switch coroutine to function with timer
-        IEnumerator ShowTracer(Vector3 hitPosition)
+        public IEnumerator ShowTracer(Vector3 hitPosition)
         {
             bulletLine.SetPosition(0, transform.position);
             bulletLine.SetPosition(1, hitPosition);
@@ -54,5 +57,6 @@ public class PistolItem : Item, IInteractable
             yield return new WaitForSeconds(0.1f);
             bulletLine.enabled = false;
         }
+        */
     }
 }
