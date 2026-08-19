@@ -43,7 +43,7 @@ public class PistolItem : Item, IInteractable
                     //StartCoroutine(ShowTracer(hit.collider.transform.position));
                 }
             }
-            return hit;
+            //return hit;
         }
 
         /*
