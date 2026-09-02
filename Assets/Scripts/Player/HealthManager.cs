@@ -1,8 +1,14 @@
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class HealthManager : MonoBehaviour
 {
+    //Reference for Movement Script
+    private BasicMovementScript MovementReference;
+    //
+    
     //Players maximum health
     public float MaxHealth = 20;
     //Players current health
@@ -11,7 +17,7 @@ public class HealthManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        MovementReference = GetComponent<BasicMovementScript>();
     }
 
     // Update is called once per frame
@@ -33,8 +39,13 @@ public class HealthManager : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<EssenceOfPain>() != null)
         {
-            ///Add Invincibility Frames at some point in some way, I think.
-            CurrentHealth -= collision.gameObject.GetComponent<EssenceOfPain>().AttackPower;
+            if (MovementReference.IsDashing == false)
+            {            
+                ///Add Invincibility Frames at some point in some way, I think.
+                CurrentHealth -= collision.gameObject.GetComponent<EssenceOfPain>().AttackPower;
+            }
+            /*///Add Invincibility Frames at some point in some way, I think.
+            CurrentHealth -= collision.gameObject.GetComponent<EssenceOfPain>().AttackPower;*/
         }
     }
 

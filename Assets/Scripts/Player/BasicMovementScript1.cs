@@ -13,7 +13,7 @@ public class BasicMovementScript : MonoBehaviour
     public Rigidbody rb;
 
     //velocittyyytytty
-    private Vector3 velocity = Vector3.zero;
+    public Vector3 velocity = Vector3.zero;
 
     //strength of the dash
     public float DashPower = 20;
@@ -22,13 +22,13 @@ public class BasicMovementScript : MonoBehaviour
     public float DashCool = 0.2f;
 
     //How much time is currently left on the dash cooldown (These should be in seconds according to their relevant programming.) (This is a timer.)
-    private float DashCoolTimeLeft = 0;
+    public float DashCoolTimeLeft = 0;
 
     //Whether you are currently in the action of dashing or not
-    private bool IsDashing = false;
+    public bool IsDashing = false;
 
     //Time left until the dash is done (These should be in seconds according to their relevant programming.) (0.1f is temporary.) (This is a timer.)
-    private float IsDashingTimeLeft = 0.1f;
+    public float IsDashingTimeLeft = 0.1f;
 
     //How long IN TIME IN SECONDS the dash ITSELF AACCTTUUAALLLLYY lasts. (This should also probably be in seconds.) (This is a solid value.)
     public float DurationOfTheDash = 0.1f;
@@ -98,14 +98,14 @@ public class BasicMovementScript : MonoBehaviour
         {
             //rb.AddForce(transform.forward * 50, ForceMode.Impulse);
             DashCoolTimeLeft = DashCool;
-            if (moveVector == Vector3.zero)
-            {
+            //if (moveVector == Vector3.zero)
+            //{
                 velocity = transform.forward * DashPower;
-            }
-            else
-            {
-                velocity += moveVector.normalized * DashPower;
-            }
+            //}
+            //else
+            //{
+                //velocity += moveVector.normalized * DashPower;
+            //}
             //The amount of time that it THINKS you are dashing is now equal to how long you will actually dash for.
             IsDashingTimeLeft = DurationOfTheDash;
             IsDashing = true;
