@@ -13,7 +13,7 @@ public class PistolItem : Item, IInteractable
         bulletLine = GetComponent<LineRenderer>();
         player = GameObject.FindWithTag("Player");
         setName("Pistol");
-        setAmmo(ammoTypes.Pistol);
+        //setAmmo(ammoTypes.Pistol);
     }
 
     public override void Use1()

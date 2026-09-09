@@ -4,7 +4,7 @@ public class Item : MonoBehaviour , IInteractable
 {
     public string itemName;
 
-    public enum ammoTypes
+/*    public enum ammoTypes
     {
         Shells,
         Rockets,
@@ -13,7 +13,7 @@ public class Item : MonoBehaviour , IInteractable
     }
 
 
-    public ammoTypes selectedAmmo;
+    public ammoTypes selectedAmmo;*/
 
     public Sprite image;
 
@@ -34,10 +34,10 @@ public class Item : MonoBehaviour , IInteractable
         this.image = image;
     }
 
-    public void setAmmo(ammoTypes ammo)
+   /* public void setAmmo(ammoTypes ammo)
     {
         selectedAmmo = ammo;
-    }
+    }*/
 
     public string getName()
     {

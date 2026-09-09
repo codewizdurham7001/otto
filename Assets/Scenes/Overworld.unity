@@ -270,8 +270,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   rb: {fileID: 7214761}
+  velocity: {x: 0, y: 0, z: 0}
   DashPower: 20
   DashCool: 0.2
+  DashCoolTimeLeft: 0
+  IsDashing: 0
+  IsDashingTimeLeft: 0.1
   DurationOfTheDash: 0.1
   OnWall: 0
 --- !u!114 &7214759
