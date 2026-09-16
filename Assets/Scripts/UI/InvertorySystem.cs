@@ -6,9 +6,9 @@ using System.Globalization;
 
 public class InvertorySystem : MonoBehaviour
 {
-    public List<Item> items = new List<Item>(5);
+    public List<GameObject> items = new List<GameObject>(5);
 
-    Item selectedItem;
+    GameObject selectedItem;
 
     public KeyCode Use1;
 
@@ -47,32 +47,32 @@ public class InvertorySystem : MonoBehaviour
         if (Input.GetKey(KeyCode.Alpha1))
         {
             selectItem(currentIndex, 0);
-            Debug.Log("selected item 1, " + selectedItem.getName());
+            Debug.Log("selected item 1, " + selectedItem.GetComponent<Item>().getName());
         }
 
         if (Input.GetKey(KeyCode.Alpha2))
         {
             selectItem(currentIndex, 1);
-            Debug.Log("selected item 2, " + selectedItem.getName());
+            Debug.Log("selected item 2, " + selectedItem.GetComponent<Item>().getName());
         }
 
         if (Input.GetKey(KeyCode.Alpha3))
         {
             selectItem(currentIndex, 2);
-            Debug.Log("selected item 3, " + selectedItem.getName());
+            Debug.Log("selected item 3, " + selectedItem.GetComponent<Item>().getName());
         }
 
         if (Input.GetKey(KeyCode.Alpha4))
         {
             selectItem(currentIndex, 3);
-            Debug.Log("selected item 4, " + selectedItem.getName());
+            Debug.Log("selected item 4, " + selectedItem.GetComponent<Item>().getName());
         }
 
         if (Input.GetKey(KeyCode.Alpha5))
         {
            
             selectItem(currentIndex, 4);
-            Debug.Log("selected item 5, " + selectedItem.getName());
+            Debug.Log("selected item 5, " + selectedItem.GetComponent<Item>().getName());
         }
 
         if (selectedItem != null)
@@ -80,12 +80,12 @@ public class InvertorySystem : MonoBehaviour
 
             if (Input.GetKeyDown(Use1))
             {
-                selectedItem.Use1();
+                selectedItem.GetComponent<Item>().Use1();
             }
 
             if (Input.GetKeyDown(Use2))
             {
-                selectedItem.Use2();
+                selectedItem.GetComponent<Item>().Use2();
             }
         }
 
@@ -93,7 +93,7 @@ public class InvertorySystem : MonoBehaviour
 
     public Item getSelectedItem()
     {
-        return selectedItem;
+        return selectedItem.GetComponent<Item>();
     }
     
     public int canAddItem()
@@ -118,7 +118,7 @@ public class InvertorySystem : MonoBehaviour
         }
     }
 
-    public void addItem(Item item, int index)
+    public void addItem(GameObject item, int index)
     {
         items[index] = item;
         item.gameObject.SetActive(false);
@@ -132,7 +132,7 @@ public class InvertorySystem : MonoBehaviour
             if (items[i] != null)
             {
                 Debug.Log("updated sprite");
-                slots[i].sprite = items[i].getImage();
+                slots[i].sprite = items[i].GetComponent<Item>().getImage();
             }
         }
     }

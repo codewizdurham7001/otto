@@ -60,6 +60,7 @@ public class InteractScript : MonoBehaviour
         }
     }
 
+    //possibly redundant
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(transform.position, transform.forward);

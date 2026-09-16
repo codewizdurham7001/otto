@@ -3,23 +3,22 @@ using UnityEngine;
 public class AttractiveBreadItem : Item , IInteractable
 {
 
-    GameObject Player;
-    InvertorySystem Inventory;
+    GameObject myPlayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         setName("Bread");
-        
+        myPlayer = GameObject.Find("Player Model");
     }
 
     public override void Use2()
     {
-        HealthManager healthManager = GameObject.Find("Player Model").GetComponent<HealthManager>();
+        HealthManager healthManager = myPlayer.GetComponent<HealthManager>();
         if (healthManager.CurrentHealth < healthManager.MaxHealth)
         {
             healthManager.Heal(5);
-            Inventory = GameObject.Find("Player Model").GetComponent<InvertorySystem>();
+            Inventory = myPlayer.GetComponent<InvertorySystem>();
             Inventory.remove();
         }
     }

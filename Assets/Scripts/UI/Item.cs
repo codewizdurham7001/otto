@@ -19,8 +19,8 @@ public class Item : MonoBehaviour , IInteractable
 
     public GameObject viewModel;
 
-    GameObject Player;
-    InvertorySystem Inventory;
+    public GameObject Player;
+    public InvertorySystem Inventory;
 
     public void setName(string name)
     {
@@ -55,7 +55,7 @@ public class Item : MonoBehaviour , IInteractable
         int indexToAdd = Inventory.canAddItem();
         if (indexToAdd != -1) 
         {
-            Inventory.addItem(this, indexToAdd);
+            Inventory.addItem(gameObject, indexToAdd);
         }
     }
 
