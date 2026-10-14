@@ -9,8 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4351176861282150191}
-  - component: {fileID: 6801707337321584772}
-  - component: {fileID: 5377718477196608640}
+  - component: {fileID: 1975759265466075315}
   m_Layer: 0
   m_Name: Sprite Centerpoint
   m_TagString: Untagged
@@ -34,7 +33,7 @@ Transform:
   - {fileID: 8106353788852615598}
   m_Father: {fileID: 2432745390145696856}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &6801707337321584772
+--- !u!95 &1975759265466075315
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -56,19 +55,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5377718477196608640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700244687490734459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f216abb36cea57499b096515a9cda4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 2080581328389219218, guid: 6a820e99de354694aa8544b6eb138bea, type: 3}
 --- !u!1 &3477690464139079416
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,6 +67,7 @@ GameObject:
   - component: {fileID: 8192413792703733264}
   - component: {fileID: 7133947261334840379}
   - component: {fileID: 1855859212801176086}
+  - component: {fileID: 4522205127423161568}
   m_Layer: 0
   m_Name: Quad
   m_TagString: Untagged
@@ -169,6 +156,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+--- !u!95 &4522205127423161568
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3477690464139079416}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 63edb5e0af09d974a847d568a52c5f18, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6778061732440295595
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,9 +190,10 @@ GameObject:
   - component: {fileID: 5929313450567413081}
   - component: {fileID: 2898529477742701784}
   - component: {fileID: 7507850186318789453}
+  - component: {fileID: 6418627566204476088}
   m_Layer: 0
   m_Name: Attractive Bread
-  m_TagString: Untagged
+  m_TagString: ItemObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -277,3 +287,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6418627566204476088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6778061732440295595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c83003c360adfc48b501082b09c54e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Attractive Bread
+  image: {fileID: 21300000, guid: 0d757787d77a2934d990f846798af42b, type: 3}
+  viewModel: {fileID: 0}
+  Player: {fileID: 0}
+  Inventory: {fileID: 0}
