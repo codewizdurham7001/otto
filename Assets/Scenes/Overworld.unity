@@ -426,6 +426,8 @@ MonoBehaviour:
   hitLayer:
     serializedVersion: 2
     m_Bits: 1
+  ChaseSpeed: 2
+  Player: {fileID: 124659623}
 --- !u!54 &60066215
 Rigidbody:
   m_ObjectHideFlags: 0
