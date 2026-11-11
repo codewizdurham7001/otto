@@ -31,7 +31,9 @@ public class DEREPSHENANIGANS : MonoBehaviour
                 //Pouncing code
                 Debug.DrawRay(origin, direction * maxDistance, Color.red);
 
-
+                rb.constraints = RigidbodyConstraints.None;
+                transform.LookAt(Player);
+                rb.AddForce(Vector3.forward, ForceMode.Impulse);
             }
 
 
