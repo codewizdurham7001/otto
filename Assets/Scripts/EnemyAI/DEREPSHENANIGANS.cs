@@ -32,7 +32,7 @@ public class DEREPSHENANIGANS : MonoBehaviour
                 Debug.DrawRay(origin, direction * maxDistance, Color.red);
 
                 rb.constraints = RigidbodyConstraints.None;
-                transform.LookAt(Player);
+                transform.LookAt(Player.transform);
                 rb.AddForce(Vector3.forward, ForceMode.Impulse);
             }
 

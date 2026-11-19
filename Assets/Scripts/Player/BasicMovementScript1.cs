@@ -96,16 +96,16 @@ public class BasicMovementScript : MonoBehaviour
 
         if (Input.GetButtonDown("Dash") && DashCoolTimeLeft <= 0)
         {
-            //rb.AddForce(transform.forward * 50, ForceMode.Impulse);
+            rb.AddForce(transform.forward * 50, ForceMode.Impulse);
             DashCoolTimeLeft = DashCool;
-            //if (moveVector == Vector3.zero)
-            //{
+            if (moveVector == Vector3.zero)
+            {
                 velocity = transform.forward * DashPower;
-            //}
-            //else
-            //{
-                //velocity += moveVector.normalized * DashPower;
-            //}
+            }
+            else
+            {
+                velocity += moveVector.normalized * DashPower;
+            }
             //The amount of time that it THINKS you are dashing is now equal to how long you will actually dash for.
             IsDashingTimeLeft = DurationOfTheDash;
             IsDashing = true;
